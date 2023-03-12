@@ -409,8 +409,14 @@ const addText = document.querySelector('#addText');
 
 addText.addEventListener('click', el => {
     let createRemovalbeDiv = document.createElement(`p`);
-    createRemovalbeDiv.classList.add('tshirt-text');
-    createRemovalbeDiv.classList.add('tshirt-text', );
+    
+    
+    
+    createRemovalbeDiv.classList.add('tshirt-text', `${$('.btn-toggle')[0].innerText.toLowerCase()}`);
+
+
+
+
     createRemovalbeDiv.innerHTML = 'TEXT';
 
     parentElement.insertBefore(createRemovalbeDiv, parentElement.children[0]);
@@ -455,7 +461,7 @@ addText.addEventListener('click', el => {
 
     // changing the text form input text
     document.querySelector('#changeText').addEventListener('input', el => {
-        tshirt_text.innerHTML = el.target.value;
+        $('.clicked-item')[0].innerHTML = el.target.value;
     })
 
     // changing the font-size
